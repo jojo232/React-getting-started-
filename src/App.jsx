@@ -52,7 +52,7 @@ const App = () => {
   
   
   // 最初の一回だけ走らせたいときは、useEffectmを使用する
-  useEffect(() => {
+  useEffect(() => { 
     if (num > 0) {
       if (num % 3 === 0) {
         faceShowFlag || setfaceShowFlag(true);
@@ -60,7 +60,13 @@ const App = () => {
         faceShowFlag && setfaceShowFlag(false);
       }
     }
-  }, [num]);
+  }, [num]);　
+  // num ステートの値が 3 の倍数であれば、faceShowFlag ステートが true になり、顔文字が表示されます。
+  // num ステートの値が 3 の倍数でなければ、faceShowFlag ステートが false になり、顔文字が非表示になります。
+  
+  
+// このコードは、useEffect フックを使ってコンポーネントのレンダリング後に副作用を実行するためのコードです。
+// useEffect フックは、第一引数に副作用を行う関数を渡し、第二引数に配列を渡すことができます。第二引数には、この関数が依存するステートの値を含めることができます。
 
   return (
     <>
