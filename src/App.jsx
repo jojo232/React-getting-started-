@@ -17,6 +17,10 @@ const App = () => {
   console.log("さいしょ");
   const [num(現在の状態の値), setNum(現在の状態を変更)] = useState(0); //初期値 = 0 , //状態変数の初期値を引数として渡すことができる
   const [faceShowFlag, setfaceShowFlag] = useState(false);
+  
+  // useState(false); = 初期値として false を持つ状態変数を定義しています。
+  // この状態変数は、 faceShowFlag という名前で定義されています。
+  // この状態変数は false で初期化され、初めに画面が表示されたときには、顔は非表示になっています
 
   const onClickCountUp = () => {
     setNum(num + 1);
